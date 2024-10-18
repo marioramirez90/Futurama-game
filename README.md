@@ -32,6 +32,3 @@ Dies ist ein einfaches 2D-UFO-Shooter-Spiel, in dem der Spieler eine Rakete steu
 1. Lade den gesamten Code herunter.
 2. Öffne die `index.html` Datei in einem Browser, um das Spiel zu starten.
 
----
-
-Dieser Text deckt die wichtigsten Aspekte ab und kann nach Belieben erweitert werden.
