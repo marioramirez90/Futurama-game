@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raumschiffschlacht</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="/manifest.json">
+
+</head>
+
+<body>
+
+    <div id="soundControl">
+        <button id="soundToggle" onclick="toggleSound()">🔊</button>
+    </div>
+
+    <div id="scoreBoard">
+        <h3>Highscores</h3>
+        <ol id="highscoreList"></ol>
+    </div>
+    <button id="shootButton">Shoot</button>
+
+    <div id="startScreen">
+        <div id="instructions">
+            <h1>Futurama-Game</h1>
+            <p>Steuerung:</p>
+            <ul class="controls">
+                <li>
+                    <div class="key up-arrow"></div>
+                    <span>Pfeiltaste nach oben: Bewege die Rakete nach oben</span>
+                </li>
+                <li>
+                    <div class="key down-arrow"></div>
+                    <span>Pfeiltaste nach unten: Bewege die Rakete nach unten</span>
+                </li>
+                <li>
+                    <div class="key space-bar"></div>
+                    <span>Leertaste: Schießen</span>
+                </li>
+            </ul>
+            <button class="start-btn" onclick="startGame()">Start</button>
+        </div>
+    </div>
+
+    <div id="gameOverScreen">
+        <div id="gameOverMessage">
+            <h2>Game Over</h2>
+            <p>Punkte: <span id="finalScore">0</span></p>
+            <input type="text" id="playerName" placeholder="Geben Sie Ihren Namen ein">
+            <button onclick="submitScore()">Speichern</button>
+        </div>
+    </div>
+
+    <div class="canvas">
+        <canvas id="canvas" width="720" height="480"></canvas>
+        <img class="img" src="img/Futurama-Logo.png" alt="">
+    </div>
+    <div class="score">
+        <p>Score: <span id="score">0</span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
