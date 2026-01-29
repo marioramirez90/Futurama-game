@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 
 <head>
@@ -10,59 +10,63 @@
 </head>
 
 <body>
+    <main>
+        <div class="aside">
+            <div id="scoreBoard">
+                <h3>HIGHSCORE</h3>
+                <ol id="highscoreList"></ol>
+            </div>
+            <div id="soundControl">
+                <button id="soundToggle" onclick="toggleSound()">🔊</button>
+            </div>
+        </div>
 
-    <div id="soundControl">
-        <button id="soundToggle" onclick="toggleSound()">🔊</button>
+        </div>
+        <div class="game_plan">
+            <div class="futurama_image"><img class="img" src="img/Futurama-Logo.png" alt="" /></div>
+            <div class="canvas">
+                <div class="score">
+                    <p>Score:<span id="score">0</span></p>
+                </div>
+                <canvas id="canvas" width="720" height="480"></canvas>
+            </div>
+        </div>
+        <div id="startScreen">
+    <div id="instructions">
+        <h1>Futurama-Game</h1>
+        <p>Steuerung:</p>
+        <ul class="controls">
+            <li>
+                <div class="key up-arrow"></div>
+                <span>Pfeiltaste nach oben: Bewege die Rakete nach oben</span>
+            </li>
+            <li>
+                <div class="key down-arrow"></div>
+                <span>Pfeiltaste nach unten: Bewege die Rakete nach unten</span>
+            </li>
+            <li>
+                <div class="key space-bar"></div>
+                <span>Leertaste: Schießen</span>
+            </li>
+        </ul>
+        <button class="start-btn" onclick="startGame()">Start</button>
     </div>
+</div>
 
-    <div id="scoreBoard">
-        <h3>HIGHSCORE</h3>
-        <ol id="highscoreList"></ol>
+<div id="gameOverScreen">
+    <div id="gameOverMessage">
+        <h2>Game Over</h2>
+        <p>Punkte: <span id="finalScore">0</span></p>
+        <input type="text" id="playerName" placeholder="Geben Sie Ihren Namen ein" />
+        <button onclick="submitScore()">Speichern</button>
     </div>
+</div>
+
+    </main>
+
 
     <button id="shootButton">Shoot</button>
-
-    <div id="startScreen">
-        <div id="instructions">
-            <h1>Futurama-Game</h1>
-            <p>Steuerung:</p>
-            <ul class="controls">
-                <li>
-                    <div class="key up-arrow"></div>
-                    <span>Pfeiltaste nach oben: Bewege die Rakete nach oben</span>
-                </li>
-                <li>
-                    <div class="key down-arrow"></div>
-                    <span>Pfeiltaste nach unten: Bewege die Rakete nach unten</span>
-                </li>
-                <li>
-                    <div class="key space-bar"></div>
-                    <span>Leertaste: Schießen</span>
-                </li>
-            </ul>
-            <button class="start-btn" onclick="startGame()">Start</button>
-        </div>
-    </div>
-
-    <div id="gameOverScreen">
-        <div id="gameOverMessage">
-            <h2>Game Over</h2>
-            <p>Punkte: <span id="finalScore">0</span></p>
-            <input type="text" id="playerName" placeholder="Geben Sie Ihren Namen ein" />
-            <button onclick="submitScore()">Speichern</button>
-        </div>
-    </div>
-
-    <div class="canvas">
-        <canvas id="canvas" width="720" height="480"></canvas>
-        <img class="img" src="img/Futurama-Logo.png" alt="" />
-    </div>
-
-    <div class="score">
-        <p>Score: <span id="score">0</span></p>
-    </div>
-
-    <script src="script.js"></script>
 </body>
+<script src="script.js"></script>
 
 </html>
