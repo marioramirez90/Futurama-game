@@ -1,6 +1,4 @@
-*{
-  font-family: fr-bold;
-}
+
 body {
 margin: 0;
 padding: 0;
@@ -12,6 +10,7 @@ height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family:movie;
 }
 
 main{
@@ -49,20 +48,7 @@ main{
   font-size: 1rem;
 }
 
-#shootButton {
-  display: none;
-  position: fixed;
-  right: 4rem;
-  top: 20rem;
-  color: black;
-  font-weight: 700;
-  background-color: #ffd700;
-  border: 2px solid black;
-}
 
-#shootButton:hover {
-  background-color: azure;
-}
 
 #startScreen,
 #gameOverScreen {
@@ -183,4 +169,76 @@ button:hover {
     font-size: 1.2rem;
     cursor: pointer;
   }
-  
+@media screen and (max-width: 1000px) {
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: black;
+    overflow: hidden;
+  }
+
+  main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .aside,
+  .futurama_image,
+  .score,
+  #scoreBoard,
+  #soundToggle,
+  #highscoreList {
+    display: none !important;
+  }
+
+
+  .game_plan {
+    margin: 0;
+    padding: 0;
+  }
+
+
+  canvas {
+    width: 100vw;
+    height: auto;
+    max-height: 100vh;
+    display: block;
+  }
+
+
+  #startScreen,
+  #gameOverScreen {
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  #shootButton {
+    display: block;
+    position: fixed;
+    bottom: 1.2rem;
+    right: 1.2rem;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: transparent;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+    border: 1px sold gold;
+    padding: 5px;
+  }
+
+  #shootButton:active {
+    transform: scale(0.95);
+  }
+}
